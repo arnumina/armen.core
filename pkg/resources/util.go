@@ -9,12 +9,17 @@
 
 package resources
 
-import "time"
+import (
+	"time"
+
+	"github.com/arnumina/logger"
+)
 
 type (
 	// Util AFAIRE.
 	Util interface {
 		LoggerPrefix(name, id string) string
+		CloneLogger(logger *logger.Logger, prefix string) *logger.Logger
 		FileExist(file string) (bool, error)
 		UnixToTime(timestamp string) time.Time
 		EncryptString(text string) (string, error)
