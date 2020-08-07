@@ -22,6 +22,7 @@ type (
 		CloneLogger(logger *logger.Logger, prefix string) *logger.Logger
 		FileExist(file string) (bool, error)
 		UnixToTime(timestamp string) time.Time
+		DecodeData(input, output interface{}) error
 		EncryptString(text string) (string, error)
 		DecryptString(text string) (string, error)
 	}
