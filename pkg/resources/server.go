@@ -9,13 +9,15 @@
 
 package resources
 
-import "github.com/gorilla/mux"
+import (
+	"github.com/gorilla/mux"
+)
 
 type (
 	// Server AFAIRE.
 	Server interface {
 		Port() int
-		NewRouter(prefix string) *mux.Router
+		Router() *mux.Router
 	}
 )
 
