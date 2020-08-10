@@ -9,11 +9,15 @@
 
 package resources
 
-import "github.com/arnumina/armen.core/pkg/jw"
+import (
+	"github.com/arnumina/armen.core/pkg/jw"
+	"github.com/arnumina/armen.core/pkg/model"
+)
 
 type (
 	// Model AFAIRE.
 	Model interface {
+		AllInstances() ([]*model.Instance, error)
 		PluginConfig(plugin string, config interface{}) error
 		InsertJob(job *jw.Job) error
 		MaybeInsertJob(job *jw.Job) (bool, error)

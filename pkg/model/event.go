@@ -9,6 +9,8 @@
 
 package model
 
+import "time"
+
 type (
 	// Event AFAIRE.
 	// AFINIR: data ?
@@ -17,6 +19,14 @@ type (
 		Disabled bool
 		After    *string
 		Repeat   *string
+	}
+
+	// Instance AFAIRE.
+	Instance struct {
+		ID        string
+		Host      string
+		Port      int
+		StartedAt time.Time
 	}
 )
 
