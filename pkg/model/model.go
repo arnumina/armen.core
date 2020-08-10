@@ -27,6 +27,7 @@ type (
 		Host      string
 		Port      int
 		StartedAt time.Time
+		Uptime    string
 	}
 )
 
